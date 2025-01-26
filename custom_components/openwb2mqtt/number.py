@@ -189,7 +189,7 @@ class openWBNumber(OpenWBBaseEntity, NumberEntity):
         _LOGGER.debug("MQTT payload: %s", payload)
 
         if publish_mqtt_message:
-            self.hass.components.mqtt.publish(self.hass, topic, payload)
+            mqtt.publish(self.hass, topic, payload)
 
         return publish_mqtt_message
 
